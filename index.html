@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<title>Psychologist</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">
+				<i class="rt-icon2-cross2"></i>
+			</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form form-inline" action="./">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="theme_button">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls with_padding">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div>
+	<!-- eof .modal -->
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+			<section class="page_topline cs table_section table_section_md columns_padding_0">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-3 text-center text-md-left">
+							<ul class="inline-dropdown inline-block divided_content">
+
+								<li class="dropdown login-dropdown">
+									<a class="header-button" data-target="#" href="./" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+										<i class="fa fa-user"></i>
+										<span class="header-button-text">Login</span>
+									</a>
+
+									<div class="dropdown-menu ls with_padding">
+
+										<p>
+											<strong class="grey">If you have an account, please log in:</strong>
+										</p>
+										<form role="form" action="/">
+
+											<div class="form-group">
+												<label for="login_email" class="sr-only">Email address</label>
+												<input type="email" class="form-control" id="login_email" placeholder="Email Address">
+											</div>
+											<div class="form-group">
+												<label for="login_password" class="sr-only">Password</label>
+												<input type="password" class="form-control" id="login_password" placeholder="Password">
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" id="remember_checkbox">
+												<label for="remember_checkbox">
+													Remember Me
+												</label>
+											</div>
+
+											<button type="button" class="theme_button color1 block_button">
+												Log in
+											</button>
+
+										</form>
+										<div class="topmargin_20 darklinks">
+											<a href="#">Forgot Your Password?</a>
+										</div>
+
+									</div>
+								</li>
+
+
+								<a class="header-button" href="#">
+									<i class="fa fa-lock"></i>
+									<span class="header-button-text">Register</span>
+								</a>
+							</ul>
+
+						</div>
+
+						<div class="col-md-6 text-center divided_content">
+
+							<div>
+								<div class="media small-teaser">
+									<div class="media-left">
+										<i class="fa fa-user highlight fontsize_16"></i>
+									</div>
+									<div class="media-body">
+314.377.3267									</div>
+								</div>
+							</div>
+
+							<div>
+								<!--
+								<div class="media small-teaser">
+									<div class="media-left">
+										<i class="fa fa-map-marker highlight fontsize_16"></i>
+									</div>
+									<div class="media-body">
+										350 Leverton Cove Road Springfield, MA
+									</div>
+								</div>
+							-->
+							</div>
+
+							<div>
+								<div class="media small-teaser">
+									<div class="media-left">
+										<i class="fa fa-envelope highlight fontsize_16"></i>
+									</div>
+									<div class="media-body">
+rizkpsych@gmail.com									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-md-3 text-center text-md-right bottommargin_0">
+							<a href="#appointment" class="theme_button color1 margin_0">Make an appointment</a>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<header class="page_header header_white table_section columns_padding_0 toggler-xs-right">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-3 col-sm-5">
+							<a href="./" class="logo">
+RiZK								
+							</a>
+							<!-- header toggler -->
+							<span class="toggle_menu visible-xs">
+								<span></span>
+							</span>
+						</div>
+						<div class="col-md-6 col-sm-2 text-center">
+							<!-- main nav start -->
+							<nav class="mainmenu_wrapper">
+								<ul class="mainmenu nav sf-menu">
+									<li class="active">
+										<a href="#box_wrapper">Home</a>
+										
+									</li>
+
+
+									<li>
+										<a href="#services">Services</a>
+									</li>
+
+									<li>
+										<a href="#about">About</a>
+									</li>
+
+									<li>
+										<a href="#faq">FAQ</a>
+									</li>
+
+									<li>
+										<a href="#prices">Prices</a>
+									</li>
+
+
+									<!-- contacts -->
+									<li>
+										<a href="#appointment">Appointment</a>
+									</li>
+									<!-- eof contacts -->
+
+								</ul>
+							</nav>
+							<!-- eof main nav -->
+							<span class="toggle_menu hidden-xs">
+								<span></span>
+							</span>
+						</div>
+
+						<div class="col-md-3 col-sm-5 text-right hidden-xs lightgreylinks">
+							<div class="page_social_icons divided_content">
+								<span>
+									<a class="social-icon soc-facebook" href="#" title="Facebook"></a>
+								</span>
+								<span>
+									<a class="social-icon soc-twitter" href="#" title="Twitter"></a>
+								</span>
+								<span>
+									<a class="social-icon soc-google" href="#" title="Google"></a>
+								</span>
+								<span>
+									<a class="social-icon soc-linkedin" href="#" title="LinkedIn"></a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="intro_section page_mainslider ds">
+				<div class="flexslider">
+					<ul class="slides">
+
+						<li>
+							<img src="images/newhome/pexels-alex-green-5699456.jpg" alt="" style="height: 699px;">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<div class="slide_description_wrapper">
+											<div class="slide_description">
+												<div class="intro-layer" data-animation="fadeInRight">
+													<h3>
+														Dr. Marianne T. Rizk
+													</h3>
+												</div>
+												<div class="intro-layer" data-animation="fadeInLeft">
+													<p class="small-text grey">
+phd, Licensed Clinical Psychologist
+													</p>
+												</div>
+											</div>
+											<!-- eof .slide_description -->
+										</div>
+										<!-- eof .slide_description_wrapper -->
+									</div>
+									<!-- eof .col-* -->
+								</div>
+								<!-- eof .row -->
+							</div>
+							<!-- eof .container -->
+						</li>
+
+						<li>
+							<img src="images/newhome/pexels-alex-green-5699456.jpg" alt="" style="height: 699px;">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<div class="slide_description_wrapper">
+											<div class="slide_description">
+												<div class="intro-layer" data-animation="fadeInRight">
+													<h3>
+														Dr. Marianne T. Rizk
+													</h3>
+												</div>
+												<div class="intro-layer" data-animation="fadeInLeft">
+													<p class="small-text grey">
+PhD, Licensed Clinical Psychologist
+													</p>
+												</div>
+											</div>
+											<!-- eof .slide_description -->
+										</div>
+										<!-- eof .slide_description_wrapper -->
+									</div>
+									<!-- eof .col-* -->
+								</div>
+								<!-- eof .row -->
+							</div>
+							<!-- eof .container -->
+						</li>
+
+					</ul>
+				</div>
+				<!-- eof flexslider -->
+			</section>
+
+			
+
+			<section id="services" class="ls section_padding_top_130 section_padding_bottom_100">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2 class="section_header with_icon">What We Can Offer</h2>
+				<p>
+					Our services are designed to support your mental, emotional, and relational well-being. Whether you are facing challenges in your personal life, struggling with anxiety or depression, or simply looking for ways to enhance your overall wellness, we are here to help. Explore the wide range of therapy solutions tailored to meet your individual needs and empower your path to healing and growth.
+				</p>
+			</div>
+		</div>
+		<div class="row columns_padding_0 columns_margin_0 fontsize_16">
+			<div class="col-md-3 col-sm-6">
+				<div class="with_padding text-center teaser hover_shadow">
+					<img src="images/service-icons/relationship.png" alt="" />
+					<h4><a href="service-single.html">Relationship</a></h4>
+					<p>Build deeper and more meaningful connections through therapy sessions designed for couples and individuals alike.</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="with_padding text-center teaser hover_shadow">
+					<img src="images/service-icons/mental.png" alt="" />
+					<h4><a href="service-single.html">Mental Health</a></h4>
+					<p>Gain tools to improve focus, reduce stress, overcome anxiety, and strengthen your emotional resilience.</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 clear-sm">
+				<div class="with_padding text-center teaser hover_shadow">
+					<img src="images/service-icons/feelings.png" alt="" />
+					<h4><a href="service-single.html">Emotional Awareness</a></h4>
+					<p>Understand, manage, and express your emotions in a healthy and constructive way.</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="with_padding text-center teaser hover_shadow">
+					<img src="images/service-icons/conflicting.png" alt="" />
+					<h4><a href="service-single.html">Conflict Resolution</a></h4>
+					<p>Learn effective communication techniques to reduce tension and resolve disputes peacefully.</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 clear-lg clear-md clear-sm">
+				<div class="with_padding text-center teaser hover_shadow">
+					<img src="images/service-icons/meditation.png" alt="" />
+					<h4><a href="service-single.html">Meditation & Mindfulness</a></h4>
+					<p>Use guided practices to stay grounded, manage emotions, and increase mental clarity.</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="with_padding text-center teaser hover_shadow">
+					<img src="images/service-icons/depression.png" alt="" />
+					<h4><a href="service-single.html">Depression Support</a></h4>
+					<p>Don’t let depression control your life. Reach out and take the first step toward healing today.</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 clear-sm">
+				<div class="with_padding text-center teaser hover_shadow">
+					<img src="images/service-icons/mind.png" alt="" />
+					<h4><a href="service-single.html">Cognitive Coaching</a></h4>
+					<p>Understand how thought patterns affect your behavior and learn how to take back control.</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="with_padding text-center teaser hover_shadow">
+					<img src="images/service-icons/relaxation.png" alt="" />
+					<h4><a href="service-single.html">Relaxation Techniques</a></h4>
+					<p>Discover techniques to calm your nervous system and recharge both your mind and body.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="about" class="cs parallax darken_gradient page_about section_padding_top_75 columns_margin_bottom_30">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-push-6 text-center">
+				<h2 class="section_header">Welcome to Psychologist &amp; Family Consulting</h2>
+				<br>
+				<p class="bold fontsize_18">My mission is to provide a compassionate, evidence-based approach to support your mental health journey.</p>
+
+				<p class="fontsize_18">
+					I am a licensed clinical psychologist, committed to providing high-quality psychotherapy and diagnostic assessment. I specialize in health psychology, where I deeply value the connection between physical and mental health. No matter the struggle you're facing, I will walk alongside you during your journey towards wellness.
+				</p>
+
+				<p class="fontsize_18">
+					Now, more than ever, mental health should be a priority. To improve access to care, I offer secure video telehealth services only — ensuring comfort, privacy, and flexibility.
+				</p>
+
+				<h4 class="topmargin_40 bottommargin_10">Education</h4>
+				<ul class="list2 fontsize_16 text-left">
+					<li><strong>Ph.D. in Clinical Psychology</strong>, University of Iowa (APA-accredited)</li>
+					<li><strong>M.A. in Clinical Psychology</strong>, University of Iowa (APA-accredited)</li>
+					<li><strong>B.A. in Psychology</strong>, Washington University in St. Louis</li>
+				</ul>
+
+				<div class="with_icon topmargin_60">
+					<h5 class="small-text text-uppercase inline-block">Marianne T. Rizk, PhD</h5>
+					<span class="lightgrey">Licensed Clinical Psychologist</span>
+				</div>
+
+			</div>
+
+			<div class="col-md-6 col-md-pull-6 text-center bottommargin_0">
+				<img src="images/newhome/rizk.jpg" alt="Psychologist Image" class="top-overlap" />
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<style>
+	.vertical-item {
+  height: 100%;
+}
+
+
+</style>
+
+<section class="ls section_padding_top_130 section_padding_bottom_100 columns_margin_top_0 columns_margin_bottom_30">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2 class="section_header with_icon">Treatment Information</h2>
+				<p>
+					I offer personalized therapy and support grounded in evidence-based practices, adapted to your specific needs and goals.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<!-- Column 1 - Populations -->
+			<div class="col-md-4 text-center">
+				<article class="vertical-item content-padding with_shadow">
+					<div class="item-media entry-thumbnail">
+						<img src="images/newhome/pexels-timur-weber-8559994.jpg" alt="">
+					</div>
+					<div class="item-content entry-content">
+						<h4 class="entry-title">Populations I Work With</h4>
+						<hr class="divider_30_1">
+						<p class="bottommargin_40 fontsize_18">
+							I provide care for adults, 
+							<br>couples,
+							<br> and older adults <br>
+							with a focus on inclusive,
+							<br> culturally competent therapy.
+						</p>
+					</div>
+				</article>
+			</div>
+
+			<!-- Column 2 - Specialty Areas -->
+			<div class="col-md-4 text-center">
+				<article class="vertical-item content-padding with_shadow">
+					<div class="item-media entry-thumbnail">
+						<img src="images/newhome/tre1 (2).jpg" alt="">
+					</div>
+					<div class="item-content entry-content">
+						<h4 class="entry-title">Specialty Areas</h4>
+						<hr class="divider_30_1">
+						<p class="bottommargin_40 fontsize_18">
+							I support clients with depression, anxiety, chronic illness, disordered eating, grief, and behavior change like smoking or weight management.
+						</p>
+					</div>
+				</article>
+			</div>
+
+			<!-- Column 3 - Treatment Methods -->
+			<!-- Column 3 - Treatment Methods (shortened) -->
+<div class="col-md-4 text-center">
+	<article class="vertical-item content-padding with_shadow">
+		<div class="item-media entry-thumbnail">
+			<img src="images/newhome/tre1 (3).jpg" alt="">
+		</div>
+		<div class="item-content entry-content">
+			<h4 class="entry-title">Treatment Methods</h4>
+			<hr class="divider_30_1">
+			<p class="fontsize_18">
+				I use evidence-based therapies tailored to your goals, including CBT, ACT, mindfulness, DBT skills, and supportive approaches focused on insight and growth.
+			</p>
+		</div>
+	</article>
+</div>
+
+		</div>
+	</div>
+</section>
+
+
+
+		
+
+			<section class="cs main_color2 parallax page_testimonials section_padding_75">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="owl-carousel testimonials-carousel top-dots" data-responsive-sm="1" data-responsive-md="1" data-responsive-lg="1" data-dots="true">
+								<blockquote>
+									“for me this was a wonderful experience. i must say that i am really impressed.”
+									<div class="item-meta">
+										<h5>Myrtle Murray</h5>
+									</div>
+								</blockquote>
+								<blockquote>
+									“for me this was a wonderful experience. i must say that i am really impressed.”
+									<div class="item-meta">
+										<h5>Myrtle Murray</h5>
+									</div>
+								</blockquote>
+								<blockquote>
+									“for me this was a wonderful experience. i must say that i am really impressed.”
+									<div class="item-meta">
+										<h5>Myrtle Murray</h5>
+									</div>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+<section id="faq" class="ls section_padding_top_130 section_padding_bottom_100">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2 class="section_header with_icon">Frequently Asked Questions</h2>
+        <p>
+          Below are answers to some common questions to help you feel more prepared and comfortable reaching out.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- FAQ Accordion (Left) -->
+      <div class="col-md-6">
+        <div class="panel-group" id="accordion1">
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse1" class="collapsed">
+                  What can I expect in the first session?
+                </a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+              <div class="panel-body">
+                We'll talk about your concerns and goals, and I'll ask questions to better understand your history and needs. Together, we’ll create a plan that works for you.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse2" class="collapsed">
+                  Do you accept insurance?
+                </a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">
+                I’m an out-of-network provider. You’ll pay directly and may request a superbill to seek reimbursement from your insurance company.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3" class="collapsed">
+                  How do I pay for sessions?
+                </a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">
+                I accept cash, Venmo, PayPal, and credit cards. Credit cards incur a 3% processing fee. Payment is due at time of service.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion1" href="#collapse4" class="collapsed">
+                  Do you offer virtual sessions?
+                </a>
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+              <div class="panel-body">
+                Yes, all sessions are conducted via secure telehealth video for your convenience and safety.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Image (Right) -->
+      <div class="col-md-6 text-center">
+        <img src="images/newhome/faq.jpg" alt="FAQ illustration" class="img-responsive" style="max-width:100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+			
+
+<section id="prices" class="cs darken_gradient section_padding_75 columns_padding_0 columns_margin_0">
+	<div class="container">
+		<div class="row flex-row price-row">
+			<!-- Intake Session -->
+			<div class="col-md-4 col-sm-6">
+				<div class="price-table price-hover">
+					<div class="price-media">
+						<div class="plan-name">
+							Intake / Initial<br> Session
+						</div>
+						<div class="plan-price with_icon">
+							$240
+							<p class="small-text">60 minutes</p>
+						</div>
+					</div>
+					<div class="price-content ls with_shadow">
+						<ul class="features-list">
+							<li>Video Telehealth Only</li>
+							<li>Comprehensive Assessment</li>
+							<li>Personalized Treatment Planning</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Individual Therapy -->
+			<div class="col-md-4 col-sm-6">
+				<div class="price-table price-hover">
+					<div class="price-media">
+						<div class="plan-name">
+							Individual<br> Therapy
+						</div>
+						<div class="plan-price with_icon">
+							$220
+							<p class="small-text">50 minutes</p>
+						</div>
+					</div>
+					<div class="price-content ls with_shadow">
+						<ul class="features-list">
+							<li>Video Telehealth Only</li>
+							<li>Evidence-Based Approaches</li>
+							<li>Flexible Scheduling</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Couples Therapy -->
+			<div class="col-md-4 col-sm-6">
+				<div class="price-table price-hover">
+					<div class="price-media">
+						<div class="plan-name">
+							Couples<br> Therapy
+						</div>
+						<div class="plan-price with_icon">
+							$275
+							<p class="small-text">75 minutes</p>
+						</div>
+					</div>
+					<div class="price-content ls with_shadow">
+						<ul class="features-list">
+							<li>Video Telehealth Only</li>
+							<li>Conflict & Communication Focus</li>
+							<li>Individual + Shared Goals</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	
+	</div>
+</section>
+
+
+			<section id="insurance-payment" class="ls section_padding_top_100 section_padding_bottom_75">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2 class="section_header with_icon">Insurance & Payment</h2>
+				<p class="fontsize_18 max_width_800 centered">
+					I’m committed to making mental health care accessible, transparent, and flexible. Here's how insurance and payment work in my practice.
+				</p>
+			</div>
+		</div>
+
+		<div class="row topmargin_60">
+			<!-- Insurance -->
+			<div class="col-md-6 col-sm-12">
+				<div class="with_padding with_border rounded text-left" style="min-height: 350px;">
+					<h4 class="highlight bottommargin_20">Insurance</h4>
+					<p class="fontsize_16">
+						I am an out-of-network provider for insurance. Patients are responsible for paying their fees directly to my clinic. Payment, as agreed upon, is due at the time of service.
+					</p>
+					<p class="fontsize_16">
+						At your request, I will provide a “Superbill” which you can submit to your insurance company for reimbursement. I can also share helpful questions to ask your insurance carrier to better understand your mental health benefits.
+					</p>
+				</div>
+			</div>
+
+			<!-- Payment -->
+			<div class="col-md-6 col-sm-12">
+				<div class="with_padding with_border rounded text-left" style="min-height: 350px;">
+					<h4 class="highlight bottommargin_20">Payment</h4>
+					<p class="fontsize_16">
+						Cash, Venmo, PayPal, and all major credit cards are accepted. Credit card payments incur a 3% fee.
+					</p>
+					<p class="fontsize_16">
+						Payment is expected at the time of your session. A receipt can be provided upon request for your records or reimbursement.
+					</p>
+					<p class="fontsize_16">
+						If you have any questions about payment methods or need support with setting up your preferred option, feel free to reach out.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id="contact-info" class="ls section_padding_top_100 section_padding_bottom_75">
+	<div class="container">
+		<div class="row flex-wrap align-items-center">
+			<!-- Left Text -->
+			<div class="col-md-6 col-sm-12 text-left">
+				<h2 class="section_header">Let's connect.</h2>
+				<p class="fontsize_18">
+					Feeling comfortable with your therapist is key to your success.
+					Call me today for a free, 15-minute initial consultation.
+				</p>
+			</div>
+
+			<!-- Right Info Blocks -->
+			<div class="col-md-6 col-sm-12">
+				<ul class="list1 no-bullets fontsize_18">
+					<li class="media bottommargin_20">
+						<i class="fa fa-phone highlight rightpadding_20" aria-hidden="true"></i>
+						<div class="media-body">
+							<strong>Phone</strong><br>
+							314.377.3267
+						</div>
+					</li>
+
+					<li class="media bottommargin_20">
+						<i class="fa fa-envelope highlight rightpadding_20" aria-hidden="true"></i>
+						<div class="media-body">
+							<strong>Email</strong><br>
+							rizkpsych@gmail.com
+						</div>
+					</li>
+
+					<li class="media">
+						<i class="fa fa-calendar highlight rightpadding_20" aria-hidden="true"></i>
+						<div class="media-body">
+							<strong>Availability</strong><br>
+							<span class="fontsize_16">Currently accepting new clients through video telehealth.</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+			<section id="appointment" class="ls section_padding_top_130 section_padding_bottom_100">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+							<h2 class="section_header with_icon highlight">Make an Appointment</h2>
+							<div class="fontsize_16">
+								Exercitation cupim ex, short ribs cow in ullamco corned beef veniam kevin. Eu frankfurter ham hock ball tip reprehenderit adipisicing ipsum
+							</div>
+
+							<form class="contact-form row columns_margin_bottom_40 topmargin_60" method="post" action="./">
+
+
+								<div class="col-sm-6">
+									<div class="contact-form-name">
+										<label for="name">Your Name
+											<span class="required">*</span>
+										</label>
+										<input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Your Name">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="contact-form-email">
+										<label for="email">Email Address
+											<span class="required">*</span>
+										</label>
+										<input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email Address">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="contact-form-subject">
+										<label for="subject">Subject
+											<span class="required">*</span>
+										</label>
+										<input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control" placeholder="Subject">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="contact-form-phone">
+										<label for="phone">Phone
+											<span class="required">*</span>
+										</label>
+										<input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control" placeholder="Phone">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="contact-form-date select-group">
+										<label for="date" class="sr-only">Date
+											<span class="required">*</span>
+										</label>
+										<div class="input-group">
+											<select aria-required="true" id="date" name="date" class="choice empty form-control">
+												<option value="" disabled selected data-default>Date</option>
+												<option value="14.03.2017">14.03.2017</option>
+												<option value="15.03.2017">15.03.2017</option>
+												<option value="16.03.2017">16.03.2017</option>
+												<option value="17.03.2017">17.03.2017</option>
+												<option value="18.03.2017">18.03.2017</option>
+												<option value="19.03.2017">19.03.2017</option>
+												<option value="20.03.2017">20.03.2017</option>
+												<option value="21.03.2017">21.03.2017</option>
+												<option value="22.03.2017">22.03.2017</option>
+												<option value="23.03.2017">23.03.2017</option>
+												<option value="24.03.2017">24.03.2017</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="contact-form-time select-group">
+										<label for="time" class="sr-only">Date
+											<span class="required">*</span>
+										</label>
+										<div class="input-group">
+											<select aria-required="true" id="time" name="time" class="choice empty form-control">
+												<option value="" disabled selected data-default>Time</option>
+												<option value="14.03.2017">9:00</option>
+												<option value="15.03.2017">10:00</option>
+												<option value="16.03.2017">11:00</option>
+												<option value="17.03.2017">12:00</option>
+												<option value="18.03.2017">13:00</option>
+												<option value="19.03.2017">14:00</option>
+												<option value="20.03.2017">15:00</option>
+												<option value="21.03.2017">16:00</option>
+												<option value="22.03.2017">17:00</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="contact-form-message">
+										<label for="message">Message</label>
+										<textarea aria-required="true" rows="1" cols="45" name="message" id="message" class="form-control" placeholder="Message"></textarea>
+									</div>
+								</div>
+
+								<div class="col-sm-12">
+
+									<div class="contact-form-submit topmargin_20">
+										<button type="submit" id="contact_form_submit" name="contact_submit" class="theme_button color1 with_shadow">Send message</button>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="page_footer cs main_color2 table_section section_padding_50 columns_padding_0">
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-sm-4 col-sm-push-4 text-center">
+							<a href="./" class="logo big text-shadow">
+								<img src="images/newhome/logo.png"  style="height: 177px;width: 200px;">
+								<span class="small-text"></span>
+							</a>
+						</div>
+
+						<div class="col-sm-4 col-sm-pull-4 text-center text-sm-left text-md-left">
+							<div class="widget widget_nav_menu greylinks">
+
+								<ul class="menu divided_content wide_divider">
+									<li class="">
+										<a href="./">Home</a>
+									</li>
+									<li class="">
+										<a href="#about">About</a>
+									</li>
+									<li class="">
+										<a href="#services">Services</a>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+
+						<div class="col-sm-4 text-center text-sm-right text-md-right">
+							<div class="widget widget_nav_menu greylinks">
+
+								<ul class="menu divided_content wide_divider">
+									<li class="">
+										<a href="gallery-regular-3-cols.html">Gallery</a>
+									</li>
+									<li class="">
+										<a href="blog-right.html">Blog</a>
+									</li>
+									<li class="">
+										<a href="contact.html">Contacts</a>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</footer>
+
+			<section class="cs main_color2 page_copyright section_padding_15">
+				<div class="container with_top_border">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<p class="small-text">&copy; 2025 Psychology and Counseling. All Rights Reserved</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<!-- eof #box_wrapper -->
+	</div>
+	<!-- eof #canvas -->
+
+	<script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
