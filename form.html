@@ -1,0 +1,136 @@
+
+			<section id="appointment" class="ls section_padding_top_130 section_padding_bottom_100">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+							<h2 class="section_header with_icon highlight">Make an Appointment</h2>
+							<div class="fontsize_16">
+								Exercitation cupim ex, short ribs cow in ullamco corned beef veniam kevin. Eu frankfurter ham hock ball tip reprehenderit adipisicing ipsum
+							</div>
+
+      <form class="contact-form row columns_margin_bottom_40 topmargin_60"
+      method="POST"
+      action="https://api.web3forms.com/submit"
+      id="contact-form"
+      novalidate>
+
+  <!-- Web3Forms required fields -->
+  <input type="hidden" name="access_key" value="89223d3c-3d83-4fef-b02d-ced0b7866228" />
+  <input type="hidden" name="subject" value="New Appointment Request from Website" />
+  <input type="hidden" name="replyto" value="email" />
+
+  <!-- Send to Marianne -->
+  <input type="hidden" name="to" value="marianne@rizkpsych.com" />
+
+  <!-- Honeypot anti-spam -->
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none !important" tabindex="-1" autocomplete="off">
+
+  <div class="col-sm-6">
+    <div class="contact-form-name">
+      <label for="name">Your Name <span class="required">*</span></label>
+      <input type="text" required name="name" id="name" class="form-control" placeholder="Your Name">
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="contact-form-email">
+      <label for="email">Email Address <span class="required">*</span></label>
+      <input type="email" required name="email" id="email" class="form-control" placeholder="Email Address">
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="contact-form-subject">
+      <label for="subject_field">Subject <span class="required">*</span></label>
+      <input type="text" required name="subject_field" id="subject_field" class="form-control" placeholder="Subject">
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="contact-form-phone">
+      <label for="phone">Phone <span class="required">*</span></label>
+      <input type="tel" required name="phone" id="phone" class="form-control" placeholder="Phone">
+    </div>
+  </div>
+
+  
+<div class="col-sm-6">
+  <div class="contact-form-date">
+    <label for="date">Date <span class="required">*</span></label>
+    <div class="input-group">
+      <input type="date" required id="date" name="date" class="form-control" />
+    </div>
+  </div>
+</div>
+<div class="col-sm-6">
+  <div class="contact-form-time">
+    <label for="time">Time <span class="required">*</span></label>
+    <div class="input-group">
+      <input type="time" required id="time" name="time" class="form-control" />
+    </div>
+  </div>
+</div>
+
+  <div class="col-sm-12">
+    <div class="contact-form-message">
+      <label for="message">Message</label>
+      <textarea rows="3" name="message" id="message" class="form-control" placeholder="Message"></textarea>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="contact-form-submit topmargin_20">
+      <button type="submit" id="contact_form_submit" name="contact_submit" class="theme_button color1 with_shadow">Send message</button>
+      <span id="form-status" style="margin-left:12px;"></span>
+    </div>
+  </div>
+</form>
+
+</div>
+</div>
+</div>
+</section>
+<script>
+  const form = document.getElementById("contact-form");
+  const statusEl = document.getElementById("form-status");
+  const submitBtn = document.getElementById("contact_form_submit");
+
+  // Add this to mark the form and stop legacy handlers
+  form.setAttribute("data-web3forms", "true");
+
+  // Use capture + stopImmediatePropagation to beat theme handlers
+  form.addEventListener("submit", async function onSubmit(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();   // << prevents other submit handlers from running
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    statusEl.textContent = "Sending...";
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        statusEl.textContent = "✅ Sent! We’ll get back to you soon.";
+        form.reset();
+      } else {
+        statusEl.textContent = "❌ Failed to send. " + (data.message || "Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      statusEl.textContent = "❌ Network error. Please try again.";
+    } finally {
+      submitBtn.disabled = false;
+    }
+  }, true); // << capture phase so our handler runs before bubbling ones
+</script>
